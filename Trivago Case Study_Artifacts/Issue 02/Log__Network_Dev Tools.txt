@@ -1,0 +1,40 @@
+Request URL: https://express.trivago.com/en_GB/accounts/bookings/eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQzY2MwMTIwMzkzNTZkNTdkMzhlYTI0MTE0NGY5YjU2NmVmMjY1MjAxMWU5ZGNiNjBjMTI5NjdiYTU4NmYyY2NkOGNiODc0OWEzNmM3Nzk4In0.eyJhdWQiOiIyZGZkODc2YjliNDlmMDBkMjYxZWI0ZGY5MmYzMzk4YzkxYzQxMjBjYTU2ZWU0NzUzNTkxOTJjNDkwOTVhZDM0IiwianRpIjoiNDNjYzAxMjAzOTM1NmQ1N2QzOGVhMjQxMTQ0ZjliNTY2ZWYyNjUyMDExZTlkY2I2MGMxMjk2N2JhNTg2ZjJjY2Q4Y2I4NzQ5YTM2Yzc3OTgiLCJpYXQiOjE2MjI5OTI1NzQsIm5iZiI6MTYyMjk5MjU3NCwiZXhwIjoxNjIyOTk2MTc0LCJzdWIiOiIxNTQwMjA4NjAiLCJzY29wZXMiOltdLCJ1dWlkIjoiZDJhZDY5Y2EtMDNkNC00MTQ4LWJiNDgtMTE0NWI1YTJkNjEyIn0.IzoZdinxhxm0R8zgCq57PGdMENuC-qkvZIt9g9rHCZ_bieslhkAHNuGV_mGCM-5g3PwpWHgJEgno20Vr6L_eoqS7J128mkgt4mPTZz67nmBbH-AUcTIZHorI0DmX5bbEJxAPlqp_FsqJ--QNQC6jKA-uDIC7Z9xoK6oonMpuXNaJNR9vvirEMHfXnEM57vmaZc0pLfDQgZmv-7zb1rtWA7lSNMcB8ic0DnqHIddWVDTunxJwuDC65D4y_WIFnLkyh75WNEy7IrxoPHk_625w8dJzVYhJaVZCKsPY5R72FvnuIYWaHPY3RIz_vG8MGqKXfy-qdxWvmRv95bczq-ic7Q
+Request Method: GET
+Status Code: 500 
+Remote Address: 2.23.68.68:443
+Referrer Policy: no-referrer-when-downgrade
+cache-control: max-age=0, must-revalidate, private
+content-encoding: gzip
+content-type: text/html; charset=UTF-8
+date: Sun, 06 Jun 2021 15:16:15 GMT
+expires: Sun, 06 Jun 2021 15:16:15 GMT
+server: nginx
+server-timing: edge; dur=2
+server-timing: origin; dur=500
+server-timing: cdn-cache; desc=MISS
+set-cookie: PHPSESSID=o3f4m8aom7j30ngajglabf444r; path=/; secure; HttpOnly
+set-cookie: _sid=ZWZlZDljMjI2Yw%3D%3D; expires=Mon, 06-Jun-2022 15:16:15 GMT; Max-Age=31536000; path=/; secure; httponly
+set-cookie: _tid=0OI01XctFPp6TG3sGFb2y65Vo_; expires=Mon, 06-Jun-2022 15:16:15 GMT; Max-Age=31536000; path=/; secure
+set-cookie: _TRV_DEBUG_START=deleted; expires=Sat, 06-Jun-2020 15:16:14 GMT; Max-Age=0; path=/; httponly
+set-cookie: _TRV_DEBUG=deleted; expires=Sat, 06-Jun-2020 15:16:14 GMT; Max-Age=0; path=/; httponly
+set-cookie: ak_bmsc=2D5DF2D311FF1BC04F8272B8F54120AB686BD9AEC7350000BFE6BC60C7793768~plp1R4ApMtgk4eZLIAPy5h+W+9d3SugmJ5k51OSIdlP4ohwObOV7XpGARFJJODgRy7Kze2J5seQNqwSqNXViVBeRoxthaNT9tI9pZq84ve5G6S1kWozN8sQKP39WsNj2UUF2r+rH6FldCyMSWOLEWKhX0rmzlNpKCW3ycqb50D//zjNtaeOsQpagPGVWVWLO+Xe0+O18D1CefFkw2C1McAGO8bWFLRx84KoIulaKQ87uc=; expires=Sun, 06 Jun 2021 17:16:15 GMT; max-age=7200; path=/; domain=.trivago.com; HttpOnly
+set-cookie: bm_mi=0121C21318EEACECA412EDB93F000259~oCZY48W6wIskzvQNnirJlfV8dnQ4F6TCHHgOvJb6vGLTQqlchYqR4m/nKWENBHt8vUP6UjMQMRlqZS4wzuAf6mb8HKAnA3Eb6sz6vJGCFO7XOZHJUPoPu6MkSrpOKPz5KspTt1Zgc1EkYWL8ccE/LwHMqjrXX/jlirb3HRKbW7bZi+3Fn7nwHH9v23GSpGji6/YwUEsiyU5iYxHf466LrKnCK3BSsWOyQ3BcTkaywMPZ4BYAqBB9wMyyf2dWIv/GWTygmN2UEcbj1DeOh0tgFvuusGD3yx2iITCl4nnQ7kBBCGi4JyCptLonLiILwP6lyNfmCRrCqZXvGEiRB+lysX6n8/qlu7xPp+WjSLKH70KOnxKeiqy5eZxbPUY7A9BZuVnL3utB7B25H+uyVEB4bU/CLTlg4n5N0l/YSipIeVt0bXSyJqUZHtiJvWGM86VaKJrbOfACgNWz6brDb+HXDpC+kLUhnSTrvVp2oL74to492rE/pLsNIgA+zJDaU8xb3BelWi76UFFL745C634hGxpZC7jDxykTnetwaI0yXFCUFC99U6s+TNIu97ohBG+Hh8Pt53ztj19YTB2a8xE0nMgUwHvbVFqmstA2v5tXsdoQoKYAd9nVzra1zvdYMKT9mjv8wRYtNFZ0aoDgjru4FB5bBaiAbNkHetUZdmWkVg4kiYmVaoqBcfuEh1FZ72Ecwe7Cwr+iSM9UTAErD0gsRKDGLpExY+FTw9fG5QqNCkH4aBU79JQoi6H4ML7/q6GXy3Ps9C8Fvklbc+56Bq8vv6y6VYpiUnotm2aTUV2WuYJ3rzC4EtyWYdRZCETPnAgbFU8lH5+FO/peFaPZepEFKvgOSddJU9WfnntBrZD+C2Q2kJli3ALXkKk8Om+JeW8QcKUBB/AYRqEd1hZXgUTKy67Y5BlKM8/ZGDmWt9KMxKOJ8P4uuEb9k+2bt0pjGumcRPGtnEW55TmmjvIDwcQdz0WZVUPssGbqVNCA1TOxHh8pi73r14zhwhwb6CNfj79TqW/XibstlsogdfjIg7cgeX9r9O02+AuSQRfds/v3Kp6VWLX5Rl5UgE0NE/VrO7nl2z0NSAhTuGg5fF0KEwn3ewzW5eWoEqEBfTe73qMx20JsCJcjfm0EAjvgayAFl2lEB3CGRJyDWf3bgZNQ8fxO4rRdNifRHa6kjtBFqL1M2jc610xYOtOJQZa8bmnnX4U13SJNj+AtSkwwYy1DosdtldRd601jD48/lKKpWfh0WLZG0qj5VcyewvuYPt15ijZbNIPktnFjFPr2bb95tFfwjQNAX8TX25NocRPOqEaIyVBHmT5CmlyPFNnq3rsRIUt8GA9k0+bYaOGMiYqVKGdzoPEo+aWqdVJ02vI6cNlkIrmdJztM03+T92qTTOpU9CijG10j5PSROAViL22yk0Oh9pRKWmTUZJi/ycPNZRj+Ecc=; Domain=.trivago.com; Path=/; Max-Age=0; HttpOnly
+strict-transport-security: max-age=63072000
+vary: Accept-Encoding
+x-powered-by: PHP/7.4.16
+:authority: express.trivago.com
+:method: GET
+:path: /en_GB/accounts/bookings/eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQzY2MwMTIwMzkzNTZkNTdkMzhlYTI0MTE0NGY5YjU2NmVmMjY1MjAxMWU5ZGNiNjBjMTI5NjdiYTU4NmYyY2NkOGNiODc0OWEzNmM3Nzk4In0.eyJhdWQiOiIyZGZkODc2YjliNDlmMDBkMjYxZWI0ZGY5MmYzMzk4YzkxYzQxMjBjYTU2ZWU0NzUzNTkxOTJjNDkwOTVhZDM0IiwianRpIjoiNDNjYzAxMjAzOTM1NmQ1N2QzOGVhMjQxMTQ0ZjliNTY2ZWYyNjUyMDExZTlkY2I2MGMxMjk2N2JhNTg2ZjJjY2Q4Y2I4NzQ5YTM2Yzc3OTgiLCJpYXQiOjE2MjI5OTI1NzQsIm5iZiI6MTYyMjk5MjU3NCwiZXhwIjoxNjIyOTk2MTc0LCJzdWIiOiIxNTQwMjA4NjAiLCJzY29wZXMiOltdLCJ1dWlkIjoiZDJhZDY5Y2EtMDNkNC00MTQ4LWJiNDgtMTE0NWI1YTJkNjEyIn0.IzoZdinxhxm0R8zgCq57PGdMENuC-qkvZIt9g9rHCZ_bieslhkAHNuGV_mGCM-5g3PwpWHgJEgno20Vr6L_eoqS7J128mkgt4mPTZz67nmBbH-AUcTIZHorI0DmX5bbEJxAPlqp_FsqJ--QNQC6jKA-uDIC7Z9xoK6oonMpuXNaJNR9vvirEMHfXnEM57vmaZc0pLfDQgZmv-7zb1rtWA7lSNMcB8ic0DnqHIddWVDTunxJwuDC65D4y_WIFnLkyh75WNEy7IrxoPHk_625w8dJzVYhJaVZCKsPY5R72FvnuIYWaHPY3RIz_vG8MGqKXfy-qdxWvmRv95bczq-ic7Q
+:scheme: https
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: edge_tid_s=aeeec2896a4d64897873abe33f; trv_tid=aeeec2896a4d64897873abe33f; OptanonAlertBoxClosed=2021-06-05T19:59:15.552Z; OptanonConsent=isIABGlobal=false&datestamp=Sat+Jun+05+2021+21%3A59%3A15+GMT%2B0200+(Central+European+Summer+Time)&version=6.5.0&hosts=H36%3A1%2CH33%3A1%2Crtw%3A1%2CH13%3A1%2CH32%3A1%2Cklm%3A1%2Cpur%3A1%2CH24%3A1%2Cdiq%3A1%2Czcf%3A1%2CH16%3A1%2CH17%3A1%2Ccbn%3A1%2Cxzo%3A1%2CH31%3A1%2Cnpr%3A1%2Cspg%3A1%2Cebv%3A1%2CH32%3A1%2Cars%3A1%2Ccux%3A1%2Cmxu%3A1%2Cxvn%3A1%2Clsx%3A1%2Cgwv%3A1%2Cily%3A1%2CH14%3A1%2CH31%3A1&consentId=8b83c261-f46a-4661-b30b-31d2eee5f9f0&interactionCount=2&landingPath=NotLandingPage&groups=C0001%3A1%2CC0003%3A1%2CC0002%3A1%2CC0004%3A1
+referer: https://www.trivago.co.uk/profile
+sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"
+sec-ch-ua-mobile: ?0
+sec-fetch-dest: iframe
+sec-fetch-mode: navigate
+sec-fetch-site: cross-site
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36
