@@ -139,7 +139,7 @@ public class utils {
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", elem);
 		}catch(Exception e) {
-			log1.error("Error occured when trying to click on the element with JaVaScript" + e);
+			log1.error("Error occurred when trying to click on the element with JaVaScript" + e);
 		}
 	}
 
@@ -156,7 +156,7 @@ public class utils {
 				elem.clear();
 			}
 		} catch (Exception e) {
-			log1.error("Error occured while clearing Input filed");
+			log1.error("Error occurred while clearing Input filed");
 		}
 	}
 
@@ -167,7 +167,7 @@ public class utils {
 			Select dropdomain = new Select(elem);
 			dropdomain.selectByValue(value);
 		} catch (Exception e) {
-			log1.error("Error occured while selecting dropdown value");
+			log1.error("Error occurred while selecting dropdown value");
 		}
 	}
 
@@ -178,7 +178,7 @@ public class utils {
 			clearWebField(elem);
 			elem.sendKeys(inputValue);
 		} catch (Exception e) {
-			log1.error("Error occured while sending input value");
+			log1.error("Error occurred while sending input value");
 		}
 	}
 	
@@ -205,7 +205,7 @@ public class utils {
 			LocalDateTime now = LocalDateTime.now();  
 			time = dtf.format(now);
 		} catch (Exception e) {
-			log1.error("Error occured while capturing the current time");
+			log1.error("Error occurred while capturing the current time");
 		}
 		return time;
 	}
@@ -216,7 +216,7 @@ public class utils {
 			element = driver.findElement(By.xpath(xPath));
 		} catch (Exception e) {
 
-			log1.error("Error occured while finding the element");
+			log1.error("Error occurred while finding the element");
 		}
 		return element;	
 	}
@@ -242,7 +242,7 @@ public class utils {
 			WebDriverWait w = new WebDriverWait(driver,10);
 			w.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
 		} catch (Exception e) {
-			log1.error("Error Occured while waiting for the element");
+			log1.error("Error Occurred while waiting for the element");
 		}
 	}
 
@@ -253,7 +253,7 @@ public class utils {
 			//w.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath))).click();
 			driver.findElement(By.xpath(xpath)).click();
 		} catch (Exception e) {
-			log1.error("Error Occured while waiting for the element to be clickable");
+			log1.error("Error Occurred while waiting for the element to be clickable");
 		}
 	}
 
@@ -276,7 +276,7 @@ public class utils {
 			}
 			log1.info(elmTxt +" Element is selected successfully ");
 		} catch (Exception e) {
-			log1.error("Error Occured while extracting the "+ elmTxt + " element text");
+			log1.error("Error Occurred while extracting the "+ elmTxt + " element text");
 		}
 	}
 
@@ -287,7 +287,7 @@ public class utils {
 				elms.get(0).click();
 			}			
 		} catch (Exception e) {
-			log1.error("Error Occured while waiting for the element to be clickable");
+			log1.error("Error Occurred while waiting for the element to be clickable");
 		}
 	}
 
@@ -303,7 +303,7 @@ public class utils {
 				} 
 			}			
 		} catch (Exception e) {
-			log1.error("Error Occured while selecting calendar date");
+			log1.error("Error Occurred while selecting calendar date");
 		}
 	}
 
