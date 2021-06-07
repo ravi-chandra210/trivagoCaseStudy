@@ -54,11 +54,9 @@ public class utils {
 				return;
 			}
 			String dir = System.getProperty("user.dir") + "\\TestData\\TestCasesNew.xls";
-			System.out.println("This is the path of the test data file : "+dir);
 			Workbook wb = Workbook.getWorkbook((new File(dir)));
 			jxl.Sheet dataSheet = wb.getSheet("Test Data");
 			data = new HashMap<String, String>();
-			System.out.println(testName);
 			dataIndex = dataSheet.findCell(testName).getRow();
 			for (int i = 0; i < dataSheet.getColumns(); i++) {
 				String key = dataSheet.getCell(i, 0).getContents();
@@ -66,8 +64,6 @@ public class utils {
 				data.put(key, value);
 			}
 			excelRows.add(data);
-			System.out.println(data);
-			System.out.println("getTestData method completed...");
 		} catch (IOException | BiffException e) {
 			e.printStackTrace();
 		}
@@ -92,7 +88,7 @@ public class utils {
 			if(elem.isDisplayed()==true) {
 				log.info("Webelement is displayed on webpage");
 			}else {
-				System.out.println("WebElement user is trying looking for is not displayed on web page " );
+				
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -108,7 +104,7 @@ public class utils {
 		if(pT.contains(PageTitle)) {
 			log.info("User is on correct webpage");
 		}else {
-			System.out.println("User is navigated to some other page which is : " + pT);
+			
 		}
 	}
 
@@ -349,7 +345,7 @@ public class utils {
 		if(lst.size()!=0) {
 			minList = Collections.min(lst);
 		}else {
-			System.out.println("Passed List is empty");
+			
 		}
 		return minList;	
 	}
@@ -366,7 +362,7 @@ public class utils {
 	            }
 	        }
 		}else {
-			System.out.println("Passed List is empty");
+			
 		}
 		return minValKey;	
 	}
