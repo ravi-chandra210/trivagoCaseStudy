@@ -66,13 +66,13 @@ public class trivagoPages {
 	String seeMoreStaysLink = "//a[@title = 'See more stays']";
 	String sortedStays = "//div[@class = 'item__flex-column']";
 	String sorted_Hdr = "//span[@class='item-link name__copytext']";
-	String sortedPrices = "//strong[@class='accommodation-list__price--e1070']";
+	String sortedPrices = "//strong[contains(@class, 'accommodation-list__price')]";
 	String sortedRatings = "//span[contains(@class , 'item-components__pillValue--eaee3')]";
 	String viewDealButton = "//span[contains(text() , 'View Deal')]";
 	String sortBy = "//select[@id='mf-select-sortby']";
 	String viewDealSearch = "//button[@data-qa='search-button']";
 	String sortedStayPageHdrSec = "//div[@id='js-fullscreen-hero']";
-	String bookingPartner = "//span[@class='accommodation-list__partner--ce464']";
+	String bookingPartner = "//span[@data-qa='recommended-price-partner' and contains (@class, 'accommodation-list__partner')]";
 
 	/********************************************** Methods ******************************************************/
 
