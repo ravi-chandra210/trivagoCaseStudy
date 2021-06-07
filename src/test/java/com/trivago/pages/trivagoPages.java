@@ -92,7 +92,6 @@ public class trivagoPages {
 		try {
 			utils.getTestData(testName);
 			testCaseID=utils.storeData("Test Case Name");
-			System.out.println("Executing testCaseId...." + testCaseID );
 			browser = utils.storeData("BROWSER");
 			url = utils.storeData("WEEKEND_URL");
 			currency = utils.storeData("CURRENCY");
@@ -176,12 +175,10 @@ public class trivagoPages {
 				log.info("Search result is found as : " + searchData);
 				String  cheapestPlace = utilsOb.getMinValKeyofMap(searchData);
 				cheapestPlace = utilsOb.brkStringByText(cheapestPlace, "to");
-				System.out.println("***" + cheapestPlace + "***");
 				log.info("Best place to visit on desired weekend is :" + cheapestPlace);
 				for(int k=0;k<sortedStay_box.size();k++){
 					WebElement currElem = sortedStay_box.get(k);
 					String curPlace = currElem.getText();
-					//System.out.println(curPlace);
 					if(curPlace.contains(cheapestPlace)){
 						int currentThread = k+1;
 						currElem.findElement(By.xpath("("+viewDealButton+")["+currentThread+"]")).click();
