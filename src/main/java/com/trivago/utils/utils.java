@@ -12,6 +12,7 @@ import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
+import org.jsoup.helper.HttpConnection.Response;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -22,8 +23,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.log4j.Logger;
 
 import jxl.Workbook;
+//import jxl.common.Logger;
 import jxl.read.biff.BiffException;
 
 public class utils {
@@ -34,6 +37,7 @@ public class utils {
 	 * @Task : Automation of given Scenario
 	 * @date : 02/06/2021
 	 */
+	static Logger log1 = Logger.getLogger(utils.class.getName());
 	
 	public static ArrayList<Map<String, String>> excelRows= null;
 	public static Map<String, String> data = null;
@@ -54,9 +58,11 @@ public class utils {
 				return;
 			}
 			String dir = System.getProperty("user.dir") + "\\TestData\\TestCasesNew.xls";
+			System.out.println("This is the path of the test data file : "+dir);
 			Workbook wb = Workbook.getWorkbook((new File(dir)));
 			jxl.Sheet dataSheet = wb.getSheet("Test Data");
 			data = new HashMap<String, String>();
+			System.out.println(testName);
 			dataIndex = dataSheet.findCell(testName).getRow();
 			for (int i = 0; i < dataSheet.getColumns(); i++) {
 				String key = dataSheet.getCell(i, 0).getContents();
@@ -64,6 +70,8 @@ public class utils {
 				data.put(key, value);
 			}
 			excelRows.add(data);
+			System.out.println(data);
+			System.out.println("getTestData method completed...");
 		} catch (IOException | BiffException e) {
 			e.printStackTrace();
 		}
@@ -81,14 +89,21 @@ public class utils {
 		} catch (InterruptedException e) {
 		}
 	}
+	
+	public static void logRequestAndResponseDetails(Response response, Logger log) {
+		log.info("Status Code--->" + response.statusCode());
+		log.info("Response--->" +response.toString());
+		log.info("Response Headers--->" + response.headers());
+		
+	}
 
 	public void verifyGivenWebElement(WebElement elem) {
 		try {
 			waitForElm(3);
 			if(elem.isDisplayed()==true) {
-				log.info("Webelement is displayed on webpage");
+				log1.info("Webelement is displayed on webpage");
 			}else {
-				
+				System.out.println("WebElement user is trying looking for is not displayed on web page " );
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -102,9 +117,9 @@ public class utils {
 		switchActiveWindow(driver);
 		String pT = getPageTitle(driver);
 		if(pT.contains(PageTitle)) {
-			log.info("User is on correct webpage");
+			log1.info("User is on correct webpage");
 		}else {
-			
+			System.out.println("User is navigated to some other page which is : " + pT);
 		}
 	}
 
@@ -124,7 +139,7 @@ public class utils {
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", elem);
 		}catch(Exception e) {
-			log.error("Error occured when trying to click on the element with JaVaScript" + e);
+			log1.error("Error occured when trying to click on the element with JaVaScript" + e);
 		}
 	}
 
@@ -141,7 +156,7 @@ public class utils {
 				elem.clear();
 			}
 		} catch (Exception e) {
-			log.error("Error occured while clearing Input filed");
+			log1.error("Error occured while clearing Input filed");
 		}
 	}
 
@@ -152,7 +167,7 @@ public class utils {
 			Select dropdomain = new Select(elem);
 			dropdomain.selectByValue(value);
 		} catch (Exception e) {
-			log.error("Error occured while selecting dropdown value");
+			log1.error("Error occured while selecting dropdown value");
 		}
 	}
 
@@ -163,7 +178,7 @@ public class utils {
 			clearWebField(elem);
 			elem.sendKeys(inputValue);
 		} catch (Exception e) {
-			log.error("Error occured while sending input value");
+			log1.error("Error occured while sending input value");
 		}
 	}
 	
@@ -179,7 +194,7 @@ public class utils {
 			File expected = new File("./screenshots/" + getCurrentTime() +".jpeg");
 			FileUtils.copyFile(actual, expected);
 		} catch (Exception e) {
-			log.error("Unable to take screenshot of required screen.");
+			log1.error("Unable to take screenshot of required screen.");
 		} 
 	}
 
@@ -190,7 +205,7 @@ public class utils {
 			LocalDateTime now = LocalDateTime.now();  
 			time = dtf.format(now);
 		} catch (Exception e) {
-			log.error("Error occured while capturing the current time");
+			log1.error("Error occured while capturing the current time");
 		}
 		return time;
 	}
@@ -201,7 +216,7 @@ public class utils {
 			element = driver.findElement(By.xpath(xPath));
 		} catch (Exception e) {
 
-			log.error("Error occured while finding the element");
+			log1.error("Error occured while finding the element");
 		}
 		return element;	
 	}
@@ -211,7 +226,7 @@ public class utils {
 			WebElement iframe1 = driver.findElement(By.id("the_message_iframe"));
 			driver.switchTo().frame(iframe1);
 		} catch (Exception e) {
-			log.error("Iframe is not displayed");
+			log1.error("Iframe is not displayed");
 		}	
 	}
 
@@ -227,7 +242,7 @@ public class utils {
 			WebDriverWait w = new WebDriverWait(driver,10);
 			w.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
 		} catch (Exception e) {
-			log.error("Error Occured while waiting for the element");
+			log1.error("Error Occured while waiting for the element");
 		}
 	}
 
@@ -238,7 +253,7 @@ public class utils {
 			//w.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath))).click();
 			driver.findElement(By.xpath(xpath)).click();
 		} catch (Exception e) {
-			log.error("Error Occured while waiting for the element to be clickable");
+			log1.error("Error Occured while waiting for the element to be clickable");
 		}
 	}
 
@@ -259,9 +274,9 @@ public class utils {
 					elm.click();
 				}
 			}
-			log.info(elmTxt +" Element is selected successfully ");
+			log1.info(elmTxt +" Element is selected successfully ");
 		} catch (Exception e) {
-			log.error("Error Occured while extracting the "+ elmTxt + " element text");
+			log1.error("Error Occured while extracting the "+ elmTxt + " element text");
 		}
 	}
 
@@ -272,7 +287,7 @@ public class utils {
 				elms.get(0).click();
 			}			
 		} catch (Exception e) {
-			log.error("Error Occured while waiting for the element to be clickable");
+			log1.error("Error Occured while waiting for the element to be clickable");
 		}
 	}
 
@@ -288,7 +303,7 @@ public class utils {
 				} 
 			}			
 		} catch (Exception e) {
-			log.error("Error Occured while selecting calendar date");
+			log1.error("Error Occured while selecting calendar date");
 		}
 	}
 
@@ -301,7 +316,7 @@ public class utils {
 		if(window<tabs.size()) {
 			driver.switchTo().window(tabs.get(window));
 		}else {
-			log.error("Desired window is not opened");
+			log1.error("Desired window is not opened");
 		}
 	}
 
@@ -314,7 +329,7 @@ public class utils {
 				txt = elem.getText();
 			}
 		} catch (Exception e) {
-			log.error("Element for which user wants to get the text is not displayed");
+			log1.error("Element for which user wants to get the text is not displayed");
 		}
 		return txt;
 	}
@@ -345,7 +360,7 @@ public class utils {
 		if(lst.size()!=0) {
 			minList = Collections.min(lst);
 		}else {
-			
+			System.out.println("Passed List is empty");
 		}
 		return minList;	
 	}
@@ -362,7 +377,7 @@ public class utils {
 	            }
 	        }
 		}else {
-			
+			System.out.println("Passed List is empty");
 		}
 		return minValKey;	
 	}
