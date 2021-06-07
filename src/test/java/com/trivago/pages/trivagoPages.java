@@ -83,8 +83,8 @@ public class trivagoPages {
 
 	/*..... Browser System properties .....*/
 	static {
-		System.setProperty("webdriver.chrome.driver", "./software/chromedriver.exe");
-		System.setProperty("webdriver.gecko.driver", "./software/geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
 	}
 
 	/*..... This Method will read test data from provided excel sheet .....*/
